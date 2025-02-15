@@ -1,9 +1,8 @@
 import { useState } from "react"
 import FilterButtons from "./components/Filter/FilterButtons";
-import Header from "./components/Header/Header";
 import Shows from "./components/Shows/Shows";
-
-
+import Header from "./components/Header/Header";
+import "./App.scss";
 
 function App() {
   const [isFilterVisible, setIsFilterVisible] = useState (false);

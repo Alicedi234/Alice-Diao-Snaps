@@ -1,0 +1,12 @@
+.header {
+  background-color: #EFFAF7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 24px;
+}/*# sourceMappingURL=Header.css.map */

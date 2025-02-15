@@ -1,4 +1,4 @@
-import photos from "../../Data/photos.json";
+import photos from "../../data/photos.json";
 
 export default function Shows({ selectedTag }) {
   const filteredPhotos = selectedTag

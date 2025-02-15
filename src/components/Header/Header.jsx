@@ -1,16 +1,17 @@
-import FilterControl from "./FilterControl"
-
+import FilterControl from "./FilterControl";
+import "./Header.scss";
 
 // pass props from app to header
-export default function Header({isFilterVisible, setIsFilterVisible}){
-
-  
-  return(
-    <>
-    <h1>Snapsss</h1>
-    <div>
-    <FilterControl isFilterVisible = {isFilterVisible} setIsFilterVisible = {setIsFilterVisible} /> 
-    </div>
-    </>
-  )
+export default function Header({ isFilterVisible, setIsFilterVisible }) {
+  return (
+    <header className="header">
+      <h1>Snaps</h1>
+      <div>
+        <FilterControl
+          isFilterVisible={isFilterVisible}
+          setIsFilterVisible={setIsFilterVisible}
+        />
+      </div>
+    </header>
+  );
 }
