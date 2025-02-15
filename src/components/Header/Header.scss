@@ -12,11 +12,23 @@
   margin-bottom: 24px;
   margin-top: 24px;
   gap: 100px;
+  &__title{
+    @include mobile-wordmark;
+    color: $primary-color1;
+  }
   &__button{
-    padding: 8px 16px;
-    height:6vh;
-    width: 10rem;
+    padding: 4px 12px;
+    width: 5rem;
     border-radius: 40px;
     margin-right:16px;
+    border: 2px solid $primary-color2;
+    &--text{
+      margin-right: 8px;
+      @include mobile-body;
+      color: $primary-color2;
+    }
   }
 }
+
+
+

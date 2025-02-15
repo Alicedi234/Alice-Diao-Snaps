@@ -15,6 +15,7 @@ function App() {
     {isFilterVisible && <FilterButtons
     selectedTag = {selectedTag} setSelectedTag = {setSelectedTag} />}
     <Shows selectedTag = {selectedTag} />
+    <img src="./assets/Icons/Filter.svg" alt="filter" />
     </>
   )
 }
