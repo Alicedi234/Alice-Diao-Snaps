@@ -5,13 +5,11 @@ import "./Header.scss";
 export default function Header({ isFilterVisible, setIsFilterVisible }) {
   return (
     <header className="header">
-      <h1>Snaps</h1>
-      <div>
+      <h1 className ="header__title">Snaps</h1>
         <FilterControl
           isFilterVisible={isFilterVisible}
           setIsFilterVisible={setIsFilterVisible}
         />
-      </div>
     </header>
   );
 }

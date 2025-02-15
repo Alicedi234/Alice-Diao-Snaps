@@ -10,4 +10,13 @@
   margin-left: 16px;
   margin-right:16px;
   margin-bottom: 24px;
+  margin-top: 24px;
+  gap: 100px;
+  &__button{
+    padding: 8px 16px;
+    height:6vh;
+    width: 10rem;
+    border-radius: 40px;
+    margin-right:16px;
+  }
 }

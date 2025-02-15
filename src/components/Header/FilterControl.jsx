@@ -6,7 +6,9 @@ export default function FilterControl({isFilterVisible, setIsFilterVisible}){
     }
  
    return(
-     <button onClick = {ClickHandler}>
-       Filters</button>
+     <button onClick = {ClickHandler} className= "header__button">
+       <span>Filters</span>
+       <img src="../../../assets/Icons/Filter.svg" alt="filter" />
+       </button>
    )
  }
