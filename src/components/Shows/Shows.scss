@@ -1,3 +1,30 @@
-.shows__image{
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+
+.shows__image--item{
   width:100%;
+}
+
+.shows{
+  margin: 0 16px;
+  &__content{
+    margin: 16px 0;
+    &--title{
+      @include mobile-body;
+      font-weight:400;
+      color: $primary-color1;
+      margin: 16px 0;
+    }
+    &--text{
+      @include mobile-title;
+      color: $primary-color1;
+      font-weight: 100;
+    }
+    &--texthighlight{
+      font-style: italic;
+    }
+  }
 }

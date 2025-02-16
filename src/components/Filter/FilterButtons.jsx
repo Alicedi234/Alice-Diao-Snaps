@@ -1,4 +1,6 @@
 import tags from "../../data/tags.json";
+import "./FilterButtons.scss";
+
 
 export default function FilterButtons({selectedTag, setSelectedTag}){
 
@@ -13,7 +15,7 @@ export default function FilterButtons({selectedTag, setSelectedTag}){
     <>
     {tags.map((tag, index) => {
       return(
-        <button key={index} onClick = {()=>ClickHandler(tag)}>{tag}</button>
+        <button className = "filter__button" key={index} onClick = {()=>ClickHandler(tag)}>{tag}</button>
       )
     })
     }
