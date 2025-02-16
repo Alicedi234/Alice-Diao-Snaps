@@ -6,10 +6,13 @@
 
 .shows__image--item{
   width:100%;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
 }
 
 .shows{
   margin: 0 16px;
+  overflow: hidden;
   &__content{
     margin: 16px 0;
     &--title{
@@ -26,5 +29,50 @@
     &--texthighlight{
       font-style: italic;
     }
+  }
+  &__image-gallary{
+    margin: 48px 0;
+  }
+  &__image{
+    border: 2px solid $secondary-color1;
+    border-radius: 15px;
+    margin: 16px 0;
+    overflow: hidden;
+    background-color: $secondary-color2;
+    height: auto;
+    position: relative;
+  }
+  &__image-container{
+    background-color: $secondary-color2;
+  }
+  &__image-tags{
+    @include flex(row,flex-start,center, wrap);
+    gap: 8px;
+    margin-left:8px;
+    background-color: $secondary-color2;
+    &--item{
+      @include mobile-body;
+      color: $primary-color1;
+      padding:8px;
+      border: 1px solid $secondary-color1;
+      margin: 8px 6px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      font-weight: 900;
+    }
+  }
+  &__image-photographer{
+    @include mobile-body;
+    color: $primary-color1;
+    background-color: $secondary-color2;
+    width:20%;
+    margin-left:80%;
+    border: 1px solid $secondary-color2;
+    border-radius: 10px 0 0 0;
+    padding: 8px;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    text-align: center;
   }
 }

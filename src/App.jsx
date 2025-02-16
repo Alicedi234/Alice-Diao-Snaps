@@ -38,8 +38,10 @@ function App() {
             they cherish, <span className="shows__content--texthighlight">expressed in their unique style.</span>
           </p>
         </div>
+        <div className="shows__image-gallary">
         <Shows selectedTag={selectedTag} />
         <img src="./assets/Icons/Filter.svg" alt="filter" />
+        </div>
       </div>
     </>
   );
