@@ -5,15 +5,25 @@
 
 .footer{
   margin: 32px 16px;
+  @include tablet{
+    margin: 24px 24px;
+  }
   &__title{
     @include mobile-wordmark;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    @include tablet{
+      @include desktop-wordmark;
+    }
   }
   &__list1{
     @include mobile-heading;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 24px;
+    @include tablet{
+      @include desktop-heading;
+      font-size:20px;
+    }
     &--item{
       margin-bottom: 4px;
     }
@@ -23,6 +33,10 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 24px;
+    @include tablet{
+      @include desktop-heading;
+      font-size:20px;
+    }
     &--item{
       margin-bottom: 4px;
     }
@@ -32,10 +46,25 @@
     gap:24px;
     margin-bottom: 24px;
   }
+  &__container{
+    @include tablet{
+      @include flex(row, space-between, center, wrap);
+      margin-bottom: 12rem;
+    }
+  }
+  &__container2{
+    @include tablet{
+      @include flex(row, flex-start, center, wrap);
+      gap: 80px;
+    }
+  }
   &__copyright{
     @include mobile-body;
     color:$secondary-color1;
     @include flex(row, flex-start, center, nowrap);
     gap: 8px;
+    @include tablet{
+      @include desktop-body;
+    }
   }
 }

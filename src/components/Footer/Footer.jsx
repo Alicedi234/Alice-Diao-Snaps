@@ -7,7 +7,9 @@ import pinterestIcon from "../../assets/Icons/Pinterest.svg";
 export default function Footer(){
   return(
     <>
+    <div className="footer__container">
     <h1 className = "footer__title">Snaps</h1>
+    <div className="footer__container2">
     <ul className = "footer__list1">
       <li className = "footer__list1--item">For Photographers</li>
       <li className = "footer__list1--item">Hire talent</li>
@@ -18,6 +20,8 @@ export default function Footer(){
       <li className = "footer__list2--item">Careers</li>
       <li className = "footer__list2--item">Support</li>
     </ul>
+    </div>
+    </div>
     <ul className = "footer__logo">
       <li><a href="https://www.facebook.com/"><img src={facebookIcon} alt="facebook" /></a></li>
       <li><a href="https://www.twitter.com/"><img src= {twitterIcon} alt="twitter" /></a></li>
