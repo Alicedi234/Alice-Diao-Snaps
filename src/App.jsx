@@ -2,6 +2,7 @@ import { useState } from "react";
 import FilterButtons from "./components/Filter/FilterButtons";
 import Shows from "./components/Shows/Shows";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./App.scss";
 
 function App() {
@@ -40,8 +41,10 @@ function App() {
         </div>
         <div className="shows__image-gallary">
         <Shows selectedTag={selectedTag} />
-        <img src="./assets/Icons/Filter.svg" alt="filter" />
         </div>
+      </div>
+      <div className="footer">
+      <Footer />
       </div>
     </>
   );

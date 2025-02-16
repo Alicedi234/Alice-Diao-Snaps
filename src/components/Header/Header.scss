@@ -4,7 +4,7 @@
 @use "../../styles/partials/typography" as *;
 
 .header{
-  background-color: $primary-color3;
+  background-color: none;
   @include flex(row, space-between,center,nowrap);
   width:100%;
   margin-left: 16px;
@@ -17,18 +17,38 @@
     color: $primary-color1;
   }
   &__button{
+    background-color: none;
     padding: 4px 12px;
     width: 5rem;
     border-radius: 40px;
     margin-right:24px;
     border: 2px solid $primary-color2;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: $primary-color2;
+      .header__button--text{
+        color: #FFFFFF;
+        background-color: $primary-color2;
+      }
+      .header__button--icon{
+        fill: #FFFFFF;
+        filter: brightness(0) invert(1);
+        background-color: $primary-color2;
+      }
+    }
     &--text{
       margin-right: 8px;
       @include mobile-body;
       color: $primary-color2;
+      background-color: none;
+      }
+    &--icon{
+      background-color: none;
+      fill: #1E6655;
+      }
     }
   }
-}
-
-
 

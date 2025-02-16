@@ -1,0 +1,41 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.footer{
+  margin: 32px 16px;
+  &__title{
+    @include mobile-wordmark;
+    margin-bottom: 24px;
+  }
+  &__list1{
+    @include mobile-heading;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    &--item{
+      margin-bottom: 4px;
+    }
+  }
+  &__list2{
+    @include mobile-heading;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    &--item{
+      margin-bottom: 4px;
+    }
+  }
+  &__logo{
+    @include flex(row, flex-start, center, nowrap);
+    gap:24px;
+    margin-bottom: 24px;
+  }
+  &__copyright{
+    @include mobile-body;
+    color:$secondary-color1;
+    @include flex(row, flex-start, center, nowrap);
+    gap: 8px;
+  }
+}

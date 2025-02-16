@@ -32,6 +32,10 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     margin: 2px 2px;
+    &:focus{
+      background-color: $primary-color2;
+      color: #FFFFFF;
+    }
       
     }
 
