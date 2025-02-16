@@ -6,9 +6,15 @@
 .filter {
   width: 100%;
   height: auto;
+  @include desktop{
+    width:30%;
+  }
   &__container {
     background-color: $secondary-color2;
     width: 100%;
+    @include desktop{
+      padding-bottom: 280%;
+    }
   }
   &__title {
     @include mobile-heading;

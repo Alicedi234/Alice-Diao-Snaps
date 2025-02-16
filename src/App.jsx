@@ -16,35 +16,41 @@ function App() {
         isFilterVisible={isFilterVisible}
         setIsFilterVisible={setIsFilterVisible}
       />
-      <div className="filter">
-        <div className="filter__container">
-          {isFilterVisible && (
-            <>
-              <h2 className="filter__title">Filters</h2>
-              <div className="filter__button-container">
-                <FilterButtons
-                  selectedTag={selectedTag}
-                  setSelectedTag={setSelectedTag}
-                />
-              </div>
-            </>
-          )}
+      <div className="main-container">
+        <div className="filter">
+          <div className="filter__container">
+            {isFilterVisible && (
+              <>
+                <h2 className="filter__title">Filters</h2>
+                <div className="filter__button-container">
+                  <FilterButtons
+                    selectedTag={selectedTag}
+                    setSelectedTag={setSelectedTag}
+                  />
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+        <div className="shows">
+          <div className="shows__content">
+            <h2 className="shows__content--title">Our mission:</h2>
+            <p className="shows__content--text">
+              Provide photographers a space to share photos of the neighborhoods
+              they cherish,{" "}
+              <span className="shows__content--texthighlight">
+                expressed in their unique style.
+              </span>
+            </p>
+          </div>
+          <div className="shows__image-gallary">
+            <Shows selectedTag={selectedTag} />
+          </div>
         </div>
       </div>
-      <div className="shows">
-        <div className="shows__content">
-          <h2 className="shows__content--title">Our mission:</h2>
-          <p className="shows__content--text">
-            Provide photographers a space to share photos of the neighborhoods
-            they cherish, <span className="shows__content--texthighlight">expressed in their unique style.</span>
-          </p>
-        </div>
-        <div className="shows__image-gallary">
-        <Shows selectedTag={selectedTag} />
-        </div>
-      </div>
+
       <div className="footer">
-      <Footer />
+        <Footer />
       </div>
     </>
   );

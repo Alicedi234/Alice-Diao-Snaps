@@ -15,6 +15,9 @@
   overflow: hidden;
   @include tablet{
     margin: 0 24px;
+    @include desktop{
+      width:70%;
+    }
   }
   &__content{
     margin: 16px 0;
