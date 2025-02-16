@@ -13,18 +13,32 @@
 .shows{
   margin: 0 16px;
   overflow: hidden;
+  @include tablet{
+    margin: 0 24px;
+  }
   &__content{
     margin: 16px 0;
+    @include tablet{
+      margin: 24px 0;
+    }
     &--title{
       @include mobile-body;
       font-weight:400;
       color: $primary-color1;
       margin: 16px 0;
+      @include tablet{
+        @include desktop-body;
+        margin: 24px 0;
+        font-weight: 300;
+      }
     }
     &--text{
       @include mobile-title;
       color: $primary-color1;
       font-weight: 100;
+      @include tablet{
+        @include desktop-title;
+      }
     }
     &--texthighlight{
       font-style: italic;
@@ -32,6 +46,11 @@
   }
   &__image-gallary{
     margin: 48px 0;
+    @include tablet{
+      @include flex(row,center,center, wrap);
+      gap: 16px;
+      margin: 56px 0;
+    }
   }
   &__image{
     border: 2px solid $secondary-color1;
@@ -41,6 +60,10 @@
     background-color: $secondary-color2;
     height: auto;
     position: relative;
+    @include tablet{
+      margin: 24px 0;
+      width:48%;
+    }
   }
   &__image-container{
     background-color: $secondary-color2;
@@ -50,6 +73,11 @@
     gap: 8px;
     margin-left:8px;
     background-color: $secondary-color2;
+    @include tablet{
+      margin-left: 12px;
+      gap: 8px;
+      width: 100%;
+    }
     &--item{
       @include mobile-body;
       color: $primary-color1;
@@ -59,6 +87,9 @@
       border-radius: 10px;
       background-color: #FFFFFF;
       font-weight: 900;
+      @include tablet{
+        @include desktop-body;
+      }
     }
   }
   &__image-photographer{
@@ -74,5 +105,9 @@
     bottom: 10%;
     right:0;
     text-align: center;
+    @include tablet{
+      @include desktop-body;
+      width: 20%;
+    }
   }
 }
