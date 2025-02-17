@@ -7,6 +7,9 @@
   margin: 32px 16px;
   @include tablet{
     margin: 24px 24px;
+    @include desktop{
+      position: relative;
+    }
   }
   &__title{
     @include mobile-wordmark;
@@ -45,11 +48,20 @@
     @include flex(row, flex-start, center, nowrap);
     gap:24px;
     margin-bottom: 24px;
+    @include desktop{
+      position: absolute;
+      top:0rem;
+      right: 1rem;
+    }
   }
   &__container{
     @include tablet{
       @include flex(row, space-between, center, wrap);
       margin-bottom: 12rem;
+      @include desktop{
+        justify-content: flex-start;
+        gap: 40%;
+      }
     }
   }
   &__container2{
