@@ -23,7 +23,9 @@ export default function Shows({ selectedTag }) {
             </div>
             <ul className="shows__image-tags">
               {photo.tags.map((tag, index) => (
-                <li className="shows__image-tags--item" key={index}>{tag}</li>
+                <li className="shows__image-tags--item" key={index}>
+                  {tag}
+                </li>
               ))}
             </ul>
           </div>

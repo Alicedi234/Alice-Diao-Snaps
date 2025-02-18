@@ -1,13 +1,13 @@
 @use "./variables" as *;
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  text-decoration:none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
   background-color: $primary-color3;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-ul{
+ul {
   list-style: none;
 }

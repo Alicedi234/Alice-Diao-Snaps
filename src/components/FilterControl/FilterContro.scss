@@ -1,0 +1,44 @@
+.header__button {
+  background-color: none;
+  padding: 4px 8px;
+  width: 5rem;
+  border-radius: 40px;
+  margin-right: 24px;
+  border: 2px solid $primary-color2;
+  cursor: pointer;
+  @include tablet {
+    margin-right: 24px;
+    width: 7rem;
+    padding: 8px 16px;
+    @include desktop {
+      margin-right: 56px;
+    }
+  }
+  &:hover,
+  &:active,
+  &:checked {
+    background-color: $primary-color2;
+    .header__button--text {
+      color: #ffffff;
+      background-color: $primary-color2;
+    }
+    .header__button--icon {
+      filter: brightness(0) invert(1);
+      background-color: $primary-color2;
+    }
+  }
+  &--text {
+    margin-right: 8px;
+    @include mobile-body;
+    color: $primary-color2;
+    background-color: none;
+    @include tablet {
+      @include desktop-body;
+      font-size: 18px;
+    }
+  }
+  &--icon {
+    background-color: none;
+    fill: #1e6655;
+  }
+}

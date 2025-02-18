@@ -1,7 +1,5 @@
 import FilterIcon from "../../assets/Icons/Filter.svg";
-
 export default function FilterControl({ isFilterVisible, setIsFilterVisible }) {
-  // pass props from header to filtercontrol
   const ClickHandler = () => {
     setIsFilterVisible(!isFilterVisible);
   };
@@ -12,4 +10,3 @@ export default function FilterControl({ isFilterVisible, setIsFilterVisible }) {
     </button>
   );
 }
-

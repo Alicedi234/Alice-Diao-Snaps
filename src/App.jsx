@@ -17,19 +17,19 @@ function App() {
         setIsFilterVisible={setIsFilterVisible}
       />
       <div className="main-container">
-          {isFilterVisible && (
-        <div className="filter">
-              <div className="filter__container">
-                <h2 className="filter__title">Filters</h2>
-                <div className="filter__button-container">
-                  <FilterButtons
-                    selectedTag={selectedTag}
-                    setSelectedTag={setSelectedTag}
-                  />
-                </div>
+        {isFilterVisible && (
+          <div className="filter">
+            <div className="filter__container">
+              <h2 className="filter__title">Filters</h2>
+              <div className="filter__button-container">
+                <FilterButtons
+                  selectedTag={selectedTag}
+                  setSelectedTag={setSelectedTag}
+                />
               </div>
-        </div>
-          )}
+            </div>
+          </div>
+        )}
         <div className="shows">
           <div className="shows__content">
             <h2 className="shows__content--title">Our mission:</h2>

@@ -1,34 +1,32 @@
 import tags from "../../data/tags.json";
 import "./FilterButtons.scss";
 
-
-export default function FilterButtons({selectedTag, setSelectedTag}){
-
-  const ClickHandler = (tag) =>{
-    if(selectedTag === tag){
+export default function FilterButtons({ selectedTag, setSelectedTag }) {
+  const ClickHandler = (tag) => {
+    if (selectedTag === tag) {
       setSelectedTag(null);
-    }else{
+    } else {
       setSelectedTag(tag);
-      }
-    };
-  return(
+    }
+  };
+  return (
     <>
-    {tags.map((tag, index)=>{
-      return(
-        <button className ={`filter__button ${selectedTag === tag ? "fitler__button--active" : ""} `}
-        key ={index} onClick ={()=>ClickHandler(tag)}>
-      {tag}
-    </button>
-      )
-    })}
+      {tags.map((tag, index) => {
+        return (
+          <button
+            className={`filter__button ${
+              selectedTag === tag ? "fitler__button--active" : ""
+            } `}
+            key={index}
+            onClick={() => ClickHandler(tag)}
+          >
+            {tag}
+          </button>
+        );
+      })}
     </>
-    
-  )
+  );
 }
-
-
-
-
 
 // {`filter__button ${selectedTag === tag ? "filter__button--active" : ""}'}
 // <button className ="filter__button" key={index} onClick = {()=>ClickHandler(tag)}>{tag}</button>

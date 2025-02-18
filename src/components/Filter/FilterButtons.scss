@@ -6,13 +6,13 @@
 .filter {
   width: 100%;
   height: auto;
-  @include desktop{
-    width:30%;
+  @include desktop {
+    width: 40%;
   }
   &__container {
     background-color: $secondary-color2;
     width: 100%;
-    @include desktop{
+    @include desktop {
       padding-bottom: 280%;
     }
   }
@@ -26,7 +26,7 @@
       @include desktop-heading;
       margin: 36px 24px;
       padding-top: 36px;
-      @include desktop{
+      @include desktop {
         margin: 48px 48px;
       }
     }
@@ -41,7 +41,7 @@
       margin-left: 23px;
       margin-right: 23px;
       padding-bottom: 80px;
-      @include desktop{
+      @include desktop {
         margin-left: 45px;
         margin-right: 45px;
       }
@@ -54,8 +54,8 @@
     padding: 3px 5px;
     background-color: #ffffff;
     border-radius: 10px;
-  &:hover, &--active
-     {
+    &:hover,
+    &--active {
       background-color: $primary-color2;
       color: #ffffff;
     }

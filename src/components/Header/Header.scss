@@ -3,73 +3,26 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.header{
+.header {
   background-color: none;
-  @include flex(row, space-between,center,nowrap);
-  width:100%;
+  @include flex(row, space-between, center, nowrap);
+  width: 100%;
   margin-left: 16px;
-  margin-right:16px;
+  margin-right: 16px;
   margin-bottom: 24px;
   margin-top: 24px;
   gap: 100px;
-  @include tablet{
-    margin:36px 24px;
-    @include desktop{
-      margin: 48px 48px
+  @include tablet {
+    margin: 36px 24px;
+    @include desktop {
+      margin: 48px 48px;
     }
   }
-  &__title{
+  &__title {
     @include mobile-wordmark;
     color: $primary-color1;
-    @include tablet{
+    @include tablet {
       @include desktop-wordmark;
     }
   }
-  &__button{
-    background-color: none;
-    padding: 4px 8px;
-    width: 5rem;
-    border-radius: 40px;
-    margin-right:24px;
-    border: 2px solid $primary-color2;
-    cursor: pointer;
-    @include tablet{
-      margin-right: 24px;
-      width: 7rem;
-      padding: 8px 16px;
-      @include desktop{
-        margin-right: 56px;
-
-      }
-    }
-
-    &:hover,
-    &:active,
-    &:checked{
-      background-color: $primary-color2;
-      .header__button--text{
-        color: #FFFFFF;
-        background-color: $primary-color2;
-      }
-      .header__button--icon{
-        filter: brightness(0) invert(1);
-        background-color: $primary-color2; 
-      }
-    }
-    &--text{
-      margin-right: 8px;
-      @include mobile-body;
-      color: $primary-color2;
-      background-color: none;
-      @include tablet{
-        @include desktop-body;
-        font-size: 18px;
-      }
-      }
-    &--icon{
-      background-color: none;
-      fill: #1E6655;
-      }
-    }
-  }
-
+}

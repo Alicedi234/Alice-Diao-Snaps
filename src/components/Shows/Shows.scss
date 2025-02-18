@@ -3,59 +3,58 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+// .shows__image--item{
+// width:100%;
+// border-radius: 15px 15px 0 0;
+// overflow: hidden;
+// }
 
-.shows__image--item{
-  width:100%;
-  border-radius: 15px 15px 0 0;
-  overflow: hidden;
-}
-
-.shows{
+.shows {
   margin: 0 16px;
   overflow: hidden;
-  @include tablet{
+  @include tablet {
     margin: 0 24px;
-    @include desktop{
+    @include desktop {
       margin: 0 48px;
-      width:100%;
+      width: 100%;
     }
   }
-  &__content{
+  &__content {
     margin: 16px 0;
-    @include tablet{
+    @include tablet {
       margin: 24px 0;
     }
-    &--title{
+    &--title {
       @include mobile-body;
-      font-weight:400;
+      font-weight: 400;
       color: $primary-color1;
       margin: 16px 0;
-      @include tablet{
+      @include tablet {
         @include desktop-body;
         margin: 24px 0;
         font-weight: 300;
       }
     }
-    &--text{
+    &--text {
       @include mobile-title;
       color: $primary-color1;
       font-weight: 100;
-      @include tablet{
+      @include tablet {
         @include desktop-title;
       }
     }
-    &--texthighlight{
+    &--texthighlight {
       font-style: italic;
     }
   }
-  &__image-gallary{
+  &__image-gallary {
     margin: 48px 0;
-    @include tablet{
-      @include flex(row,space-around,center, wrap);
+    @include tablet {
+      @include flex(row, space-around, center, wrap);
       margin: 56px 0;
     }
   }
-  &__image{
+  &__image {
     border: 2px solid $secondary-color1;
     border-radius: 15px;
     margin: 16px 0;
@@ -63,64 +62,67 @@
     background-color: $secondary-color2;
     height: auto;
     position: relative;
-    @include tablet{
+    @include tablet {
       margin: 24px 0;
-      width:48%;
-      @include desktop{
-        width:30%;
+      width: 48%;
+      @include desktop {
+        width: 30%;
       }
     }
+    &--item {
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
+    }
   }
-  &__image-container{
+  &__image-container {
     background-color: $secondary-color2;
   }
-  &__image-tags{
-    @include flex(row,flex-start,center, nowrap);
+  &__image-tags {
+    @include flex(row, flex-start, center, nowrap);
     gap: 6px;
-    margin-left:8px;
+    margin-left: 8px;
     background-color: $secondary-color2;
-    @include tablet{
+    @include tablet {
       margin-left: 12px;
       gap: 8px;
       width: 100%;
     }
-    &--item{
+    &--item {
       @include mobile-smallbody;
       color: $primary-color1;
-      padding:6px;
+      padding: 6px;
       border: 1px solid $secondary-color1;
       margin: 8px 6px;
       border-radius: 10px;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       font-weight: 900;
-      @include tablet{
+      @include tablet {
         @include desktop-smallbody;
       }
     }
   }
-  &__image-photographer{
+  &__image-photographer {
     @include mobile-smallbody;
     color: $primary-color1;
     background-color: $secondary-color2;
-    margin-left:80%;
+    margin-left: 80%;
     border: 1px solid $secondary-color2;
     border-radius: 10px 0 0 0;
     padding: 6px;
     position: absolute;
     bottom: 48px;
-    right:0;
+    right: 0;
     text-align: center;
-    @include tablet{
+    @include tablet {
       @include desktop-smallbody;
-      width:auto;
-    
+      width: auto;
     }
   }
 }
-
-.main-container{
+.main-container {
   @include flex(column, center, center, nowrap);
-  @include desktop{
+  @include desktop {
     @include flex(row-reverse, center, flex-start, nowrap);
   }
 }

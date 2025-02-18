@@ -3,83 +3,83 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.footer{
+.footer {
   margin: 32px 16px;
-  @include tablet{
+  @include tablet {
     margin: 24px 24px;
-    @include desktop{
+    @include desktop {
       position: relative;
-      @include desktop{
-        margin:48px 48px;
+      @include desktop {
+        margin: 48px 48px;
       }
     }
   }
-  &__title{
+  &__title {
     @include mobile-wordmark;
     margin-bottom: 16px;
-    @include tablet{
+    @include tablet {
       @include desktop-wordmark;
     }
   }
-  &__list1{
+  &__list1 {
     @include mobile-heading;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 24px;
-    @include tablet{
+    @include tablet {
       @include desktop-heading;
-      font-size:20px;
+      font-size: 20px;
     }
-    &--item{
+    &--item {
       margin-bottom: 4px;
     }
   }
-  &__list2{
+  &__list2 {
     @include mobile-heading;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 24px;
-    @include tablet{
+    @include tablet {
       @include desktop-heading;
-      font-size:20px;
+      font-size: 20px;
     }
-    &--item{
+    &--item {
       margin-bottom: 4px;
     }
   }
-  &__logo{
+  &__logo {
     @include flex(row, flex-start, center, nowrap);
-    gap:24px;
+    gap: 24px;
     margin-bottom: 24px;
-    @include desktop{
+    @include desktop {
       position: absolute;
-      top:0rem;
+      top: 0rem;
       right: 1rem;
     }
   }
-  &__container{
-    @include tablet{
+  &__container {
+    @include tablet {
       @include flex(row, space-between, center, wrap);
       margin-bottom: 12rem;
-      @include desktop{
+      @include desktop {
         justify-content: flex-start;
         gap: 40%;
       }
     }
   }
-  &__container2{
-    @include tablet{
+  &__container2 {
+    @include tablet {
       @include flex(row, flex-start, center, wrap);
       gap: 80px;
-      margin-left:24px;
+      margin-left: 24px;
     }
   }
-  &__copyright{
+  &__copyright {
     @include mobile-body;
-    color:$secondary-color1;
+    color: $secondary-color1;
     @include flex(row, flex-start, center, nowrap);
     gap: 8px;
-    @include tablet{
+    @include tablet {
       @include desktop-body;
     }
   }
