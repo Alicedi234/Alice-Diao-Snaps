@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Header from "./components/Header/Header";
 import FilterButtons from "./components/Filter/FilterButtons";
 import Shows from "./components/Shows/Shows";
-import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./App.scss";
 

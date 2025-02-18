@@ -1,4 +1,6 @@
 import FilterIcon from "../../assets/Icons/Filter.svg";
+import "./FilterControl.scss";
+
 export default function FilterControl({ isFilterVisible, setIsFilterVisible }) {
   const ClickHandler = () => {
     setIsFilterVisible(!isFilterVisible);
