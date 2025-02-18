@@ -26,6 +26,9 @@
       @include desktop-heading;
       margin: 36px 24px;
       padding-top: 36px;
+      @include desktop{
+        margin: 48px 48px;
+      }
     }
   }
   &__button-container {
@@ -38,6 +41,10 @@
       margin-left: 23px;
       margin-right: 23px;
       padding-bottom: 80px;
+      @include desktop{
+        margin-left: 45px;
+        margin-right: 45px;
+      }
     }
   }
   &__button {
@@ -47,8 +54,8 @@
     padding: 3px 5px;
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 2px 2px;
-    &:focus {
+  &:hover, &--active
+     {
       background-color: $primary-color2;
       color: #ffffff;
     }

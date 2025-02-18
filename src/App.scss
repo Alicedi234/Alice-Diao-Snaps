@@ -3,8 +3,3 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/typography" as *;
 
-.main-container{
-  @include desktop{
-    @include flex(row-reverse, center, flex-start, nowrap);
-  }
-}

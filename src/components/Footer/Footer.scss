@@ -9,6 +9,9 @@
     margin: 24px 24px;
     @include desktop{
       position: relative;
+      @include desktop{
+        margin:48px 48px;
+      }
     }
   }
   &__title{

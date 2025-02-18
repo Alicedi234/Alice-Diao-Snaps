@@ -13,12 +13,22 @@ export default function FilterButtons({selectedTag, setSelectedTag}){
     };
   return(
     <>
-    {tags.map((tag, index) => {
+    {tags.map((tag, index)=>{
       return(
-        <button className = "filter__button" key={index} onClick = {()=>ClickHandler(tag)}>{tag}</button>
+        <button className ={`filter__button ${selectedTag === tag ? "fitler__button--active" : ""} `}
+        key ={index} onClick ={()=>ClickHandler(tag)}>
+      {tag}
+    </button>
       )
-    })
-    }
+    })}
     </>
+    
   )
 }
+
+
+
+
+
+// {`filter__button ${selectedTag === tag ? "filter__button--active" : ""}'}
+// <button className ="filter__button" key={index} onClick = {()=>ClickHandler(tag)}>{tag}</button>
