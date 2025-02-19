@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Header from "./components/Header/Header";
-import FilterButtons from "./components/Filter/FilterButtons";
-import Shows from "./components/Shows/Shows";
+import Filter from "./components/Filter/Filter";
+import DisplayPhotos from "./components/DisplayPhotos/DisplayPhotos";
 import Footer from "./components/Footer/Footer";
 import "./App.scss";
+
 
 function App() {
   const [isFilterVisible, setIsFilterVisible] = useState(false);
@@ -22,7 +23,7 @@ function App() {
             <div className="filter__container">
               <h2 className="filter__title">Filters</h2>
               <div className="filter__button-container">
-                <FilterButtons
+                <Filter
                   selectedTag={selectedTag}
                   setSelectedTag={setSelectedTag}
                 />
@@ -30,23 +31,8 @@ function App() {
             </div>
           </div>
         )}
-        <div className="shows">
-          <div className="shows__content">
-            <h2 className="shows__content--title">Our mission:</h2>
-            <p className="shows__content--text">
-              Provide photographers a space to share photos of the neighborhoods
-              they cherish,{" "}
-              <span className="shows__content--texthighlight">
-                expressed in their unique style.
-              </span>
-            </p>
-          </div>
-          <div className="shows__image-gallary">
-            <Shows selectedTag={selectedTag} />
-          </div>
-        </div>
+        <DisplayPhotos isFilterVisible ={isFilterVisible} selectedTag={selectedTag} />
       </div>
-
       <div className="footer">
         <Footer />
       </div>

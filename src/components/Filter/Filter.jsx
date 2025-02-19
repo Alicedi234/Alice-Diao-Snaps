@@ -1,5 +1,6 @@
 import tags from "../../data/tags.json";
-import "./FilterButtons.scss";
+import "./Filter.scss";
+
 export default function FilterButtons({ selectedTag, setSelectedTag }) {
   const ClickHandler = (tag) => {
     if (selectedTag === tag) {
