@@ -1,7 +1,7 @@
 import "./PhotoCard.scss";
 
 export default function PhotoCard({filteredPhotos, isFilterVisible}) {
-
+  
   return (
     <>
       {filteredPhotos.map((photo) => {
@@ -12,7 +12,7 @@ export default function PhotoCard({filteredPhotos, isFilterVisible}) {
           >
             <div className="gallery__image-container">
               <img
-                src={photo.photo}
+                src={photo.photo} 
                 alt="photo"
                 className="gallery__image--item"
               />
