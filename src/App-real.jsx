@@ -4,16 +4,16 @@ import HomePage from "./pages/HomePage/HomePage";
 import PhotoPage from "./pages/PhotoPage/PhotoPage"
 
 
-
 function App() {
   return(
     <main>
       <Router>
-        <Routes> */}
+        <Routes>
           {/* "/" -> HomePage */}
           <Route path = "/" element = {<HomePage />} />
-          {/* "/photos/:id" -> PhotoPage*/}
-          <Route path="/photos/:id" element = {<PhotoPage/>}/>
+
+          {/* "/photos/:id" -> PhotoPage */}
+          <Route path = "/photos/:id" element = {<PhotoPage/>} />
         </Routes>
       </Router>
     </main>
