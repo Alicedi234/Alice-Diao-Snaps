@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function PhotoDetailsCard({ photoDetails }) {
+export default function PhotoDetailsCard({ photoDetails=[], photoComments=[] }) {
   return (
     <>
       <div className="photoDetail__image">
@@ -8,7 +8,7 @@ export default function PhotoDetailsCard({ photoDetails }) {
             src={photoDetails.photo}
             alt="photo"
             className="photoDetail__image--item"
-            />
+          />
         </div>
         <ul className="photoDetail__image-tags">
           {photoDetails.tags.map((tag, index) => (
@@ -24,6 +24,23 @@ export default function PhotoDetailsCard({ photoDetails }) {
         <div className="photoDetail__image-photographer">
           {photoDetails.photographer}
         </div>
+      </div>
+      <div>
+        {photoComments && photoComments.map((photoComment) => {
+          return (
+              <div className="photoDetail__comment" key={photoComment.id}>
+                <div className="photoDetail__comment--name">
+                  {photoComment.name}
+                </div>
+                <div className="photoDetail__comment--text">
+                  {photoComment.comment}
+                </div>
+                <div className="photoDetail__comment--time">
+                  {photoComments.timestamp}
+                </div>
+              </div>
+          );
+        })}
       </div>
     </>
   );

@@ -9,7 +9,7 @@ function App() {
   return(
     <main>
       <Router>
-        <Routes> */}
+        <Routes> */
           {/* "/" -> HomePage */}
           <Route path = "/" element = {<HomePage />} />
           {/* "/photos/:id" -> PhotoPage*/}
