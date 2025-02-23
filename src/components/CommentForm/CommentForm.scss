@@ -6,25 +6,43 @@
 .comment{
   width: 100%;
   margin: 48px 16px;
+  @include tablet{
+    margin: 100px 24px;
+  }
   &__label{
     display: block;
     @include mobile-heading;
     margin: 8px 0;
+    @include tablet{
+      @include desktop-heading;
+      margin:16px 0;
+    }
+    
   }
   &__input--name{
-    width:94%;
+    width:95%;
     border-radius: 8px;
     border: 2px solid $secondary-color1;
     background-color: #FFFFFF;
     height:5vh;
     margin-bottom: 8px;
+    text-align: left;
+    @include tablet{
+      width:96%;
+      height:6vh;
+    }
   }
   &__input--comment{
-    width:94%;
+    width:95%;
     border-radius: 8px;
     border: 2px solid $secondary-color1;
     background-color: #FFFFFF;
     height:8vh;
+    text-align: left;
+    @include tablet{
+      width:96%;
+      height:10vh;
+    }
   }
   &__button{
     @include mobile-heading;
@@ -38,7 +56,11 @@
     margin-left: auto;
     display: block;
     margin-right:6%;
-    
-
+    @include tablet{
+      @include desktop-heading;
+      margin-right: 4%;
+      margin-top: 16px;
+      padding: 8px 24px;
+    }
   }
 }

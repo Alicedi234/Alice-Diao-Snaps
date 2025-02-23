@@ -5,12 +5,18 @@
 
 .photoDetail__comment--container{
   margin: 16px 16px 56px 16px;
+  @include tablet{
+    margin: 16px 24px 100px 24px;
+  }
 
 }
 
 .photoDetail__comment--title{
   @include mobile-heading;
   margin: 16px 0;
+  @include tablet{
+    @include desktop-heading;
+  }
 
 }
 
@@ -20,6 +26,11 @@
     color: $primary-color2;
     margin-top: 16px;
     margin-bottom:8px;
+    @include tablet{
+      @include desktop-heading;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
   }
   &--container2{
     @include flex(row, space-between, center, nowrap);
@@ -28,11 +39,19 @@
   &--time{
     @include mobile-body;
     color: $primary-color2;
+    @include tablet{
+      @include desktop-heading;
+    }
   }
   &--text{
     @include mobile-heading;
     font-size: 15px;
     margin-bottom: 16px;
+    @include tablet{
+      @include desktop-heading;
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
   }
 }
 

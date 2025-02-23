@@ -6,7 +6,7 @@ import pinterestIcon from "../../assets/Icons/Pinterest.svg";
 
 export default function Footer() {
   return (
-    <>
+    <div className="footer">
       <div className="footer__container">
         <h1 className="footer__title">Snaps</h1>
         <div className="footer__container2">
@@ -50,6 +50,6 @@ export default function Footer() {
         <li className="footer__copyright--item">Privacy</li>
         <li className="footer__copyright--item">Cookies</li>
       </ul>
-    </>
+    </div>
   );
 }
