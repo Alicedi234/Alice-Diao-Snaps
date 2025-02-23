@@ -1,0 +1,20 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.photoDetail__header{
+  margin: 24px 16px 40px 16px;
+  @include flex(row, space-between, center, nowrap);
+  &--title{
+    @include mobile-wordmark;
+  }
+  &--link{
+    @include mobile-title;
+    color: $primary-color2;
+    font-weight: 500;
+    font-family: "Outfit";
+  }
+
+
+}
