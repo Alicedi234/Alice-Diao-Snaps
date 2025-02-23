@@ -1,0 +1,41 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.photoDetail__comment--container{
+  margin: 16px 16px 56px 16px;
+
+}
+
+.photoDetail__comment--title{
+  @include mobile-heading;
+  margin: 16px 0;
+
+}
+
+.photoDetail__comment{
+  &--name{
+    @include mobile-body;
+    color: $primary-color2;
+    margin-top: 16px;
+    margin-bottom:8px;
+  }
+  &--container2{
+    @include flex(row, space-between, center, nowrap);
+
+  }
+  &--time{
+    @include mobile-body;
+    color: $primary-color2;
+  }
+  &--text{
+    @include mobile-heading;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+}
+
+hr{
+  border: 1px solid $secondary-color1;
+}

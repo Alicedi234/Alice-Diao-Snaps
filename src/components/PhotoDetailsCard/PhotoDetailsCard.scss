@@ -13,7 +13,10 @@
     position: relative;
     @include tablet {
       margin: 24px 0;
-      width: 48%;
+      @include desktop{
+        margin: 48px 0;
+        max-width: 1200px;
+      }
     }
     &--item{
       width: 100%;
