@@ -1,0 +1,93 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.photoDetail__image{
+    border: 2px solid $secondary-color1;
+    border-radius: 15px;
+    margin: 16px 16px;
+    overflow: hidden;
+    background-color: $secondary-color2;
+    height: auto;
+    position: relative;
+    @include tablet {
+      margin: 56px 24px;
+    }
+    &--item{
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
+      display:block;
+    }
+    &-tags{
+    @include flex(row, flex-start, center, nowrap);
+    margin-top: 16px;
+    gap: 6px;
+    margin-left: 8px;
+    background-color: $secondary-color2;
+    @include tablet {
+      margin-left: 12px;
+      gap: 8px;
+      width: 100%;
+    }
+    &--item{
+      @include mobile-body;
+      color: $primary-color1;
+      padding: 6px;
+      border: 1px solid $secondary-color1;
+      margin: 8px 6px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      font-weight: 900;
+      @include tablet {
+        @include desktop-body;
+        padding: 8px 16px;
+      }
+    }
+  }
+  &--container{
+    margin:8px 16px;
+    @include flex(row, space-between, center, nowrap);
+    background-color:$secondary-color2; 
+    @include tablet{
+      margin:16px 24px;
+    }
+  }
+  &--like{
+    @include mobile-heading;
+    background-color: $secondary-color2;
+    font-size: 15px;
+    @include tablet{
+      @include desktop-heading;
+      font-size: 20px;
+    }
+  }
+  &--time{
+    @include mobile-heading;
+    background-color: $secondary-color2;
+    font-size: 15px;
+    @include tablet{
+      @include desktop-heading;
+      font-size: 20px;
+    }
+  }
+  &--photographer{
+    margin-left:8px;
+    margin-bottom: 16px;
+    @include mobile-heading;
+    font-size: 15px;
+    background-color: $secondary-color2;
+    @include tablet{
+      @include desktop-heading;
+      font-size: 20px;
+      display: inline-block;
+      position: relative;
+      top:-46px;
+      left:35%;
+    }
+  }
+  &--photographertext{
+    background-color: $secondary-color2;
+  }
+}
