@@ -3,7 +3,9 @@ import "./PhotoDetailHeader.scss";
 export default function PhotoDetailHeader() {
   return (
     <header className="photoDetail__header">
+      <Link to ="/">
       <h1 className="photoDetail__header--title">Snaps</h1>
+      </Link>
       <Link to="/">
         <svg
           width="30"

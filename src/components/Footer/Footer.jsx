@@ -1,4 +1,5 @@
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 import facebookIcon from "../../assets/Icons/Facebook.svg";
 import twitterIcon from "../../assets/Icons/X_twitter.svg";
 import instagramIcon from "../../assets/Icons/Instagram.svg";
@@ -8,7 +9,9 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footer__container">
+        <Link to ="/">
         <h1 className="footer__title">Snaps</h1>
+        </Link>
         <div className="footer__container2">
           <ul className="footer__list1">
             <li className="footer__list1--item">For Photographers</li>

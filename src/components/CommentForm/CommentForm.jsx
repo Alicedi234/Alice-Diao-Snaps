@@ -34,12 +34,14 @@ export default function CommentForm({onSubmit}){
       <label htmlFor="name" className="comment__label">Name</label>
       <input  className ="comment__input--name"
        type="text" id="name" value ={name} 
-       onChange ={(event) => setName(event.target.value)}  required/>
+      required/>
       <label htmlFor="comment" className="comment__label">Comment</label>
       <textarea className ="comment__input--comment" name="comment" value ={comment}
-      onChange={(event)=>setComment(event.target.value)} required></textarea>
+      required></textarea>
       <button className ="comment__button" type = "submit">Submit</button>
     </form>
     
   )
 }
+// onChange ={(event) => setName(event.target.value)}
+// onChange={(event)=>setComment(event.target.value)} 
