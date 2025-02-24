@@ -4,7 +4,7 @@ export default function PhotoCommentsCard({ photoComments }) {
   return (
     <div className="photoDetail__comment--container">
       <h2 className="photoDetail__comment--title">
-        {photoComments.length} Comments
+        {photoComments.length}{photoComments.length >1 ? " Comments": " Comment"}
       </h2>
       {photoComments &&
         reversePhotoComments.map((photoComment) => {
