@@ -11,7 +11,7 @@ export default function PhotoCard({filteredPhotos, isFilterVisible}) {
             key={photo.id}
             className={`gallery__image ${isFilterVisible ? "gallery__imagewithfilter" : ""}`}
           >
-            <div className="gallery__image-container">
+            {/* <div className="gallery__image-container"> */}
             <Link to = {`/photos/${photo.id}`}>
               <img
                 src={photo.photo} 
@@ -19,7 +19,7 @@ export default function PhotoCard({filteredPhotos, isFilterVisible}) {
                 className="gallery__image--item"
                 />
             </Link>
-            </div>
+            {/* </div> */}
             <div className="gallery__image-photographer">
               {photo.photographer}
             </div>

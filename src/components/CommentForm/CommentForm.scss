@@ -1,0 +1,44 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.comment{
+  width: 100%;
+  margin: 48px 16px;
+  &__label{
+    display: block;
+    @include mobile-heading;
+    margin: 8px 0;
+  }
+  &__input--name{
+    width:94%;
+    border-radius: 8px;
+    border: 2px solid $secondary-color1;
+    background-color: #FFFFFF;
+    height:5vh;
+    margin-bottom: 8px;
+  }
+  &__input--comment{
+    width:94%;
+    border-radius: 8px;
+    border: 2px solid $secondary-color1;
+    background-color: #FFFFFF;
+    height:8vh;
+  }
+  &__button{
+    @include mobile-heading;
+    background-color: $primary-color2;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 8px;
+    font-weight: 400;
+    margin-left: auto;
+    display: block;
+    margin-right:6%;
+    
+
+  }
+}
