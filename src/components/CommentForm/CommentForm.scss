@@ -27,9 +27,17 @@
     height:5vh;
     margin-bottom: 8px;
     text-align: left;
+    padding: 8px;
+    &:focus{
+      border: 2px solid $primary-color2;
+    }
+    &:invalid{
+      border: 2px solid #B10606;
+    }
     @include tablet{
       width:96%;
       height:6vh;
+      padding: 8px 16px;
     }
   }
   &__input--comment{
@@ -39,9 +47,17 @@
     background-color: #FFFFFF;
     height:8vh;
     text-align: left;
+    padding: 8px;
+    &:focus{
+      border: 2px solid $primary-color2
+    }
+    &:invalid{
+      border: 2px solid #B10606;
+    }
     @include tablet{
       width:96%;
       height:10vh;
+      padding: 8px 16px;
     }
   }
   &__button{

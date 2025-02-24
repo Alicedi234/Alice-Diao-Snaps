@@ -1,30 +1,37 @@
 import "./PhotoCommentsCard.scss";
-export default function PhotoCommentsCard({photoComments}){
-  return(
+export default function PhotoCommentsCard({ photoComments }) {
+  const reversePhotoComments = [...photoComments].reverse();
+  return (
     <div className="photoDetail__comment--container">
-      <h2 className="photoDetail__comment--title">{photoComments.length} Comments</h2>
-        {photoComments && photoComments.map((photoComment) => {
+      <h2 className="photoDetail__comment--title">
+        {photoComments.length} Comments
+      </h2>
+      {photoComments &&
+        reversePhotoComments.map((photoComment) => {
           return (
-              <div className="photoDetail__comment" key={photoComment.id}>
-                <hr />
-                <div className ="photoDetail__comment--container2">
+            <div className="photoDetail__comment" key={photoComment.id}>
+              <hr />
+              <div className="photoDetail__comment--container2">
                 <div className="photoDetail__comment--name">
                   {photoComment.name}
                 </div>
                 <div className="photoDetail__comment--time">
-                {new Date(photoComment.timestamp).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit",
-                })}
-                </div>
-                </div>
-                <div className="photoDetail__comment--text">
-                  {photoComment.comment}
+                  {new Date(photoComment.timestamp).toLocaleDateString(
+                    "en-US",
+                    {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "2-digit",
+                    }
+                  )}
                 </div>
               </div>
+              <div className="photoDetail__comment--text">
+                {photoComment.comment}
+              </div>
+            </div>
           );
         })}
-      </div>
-  )
+    </div>
+  );
 }
