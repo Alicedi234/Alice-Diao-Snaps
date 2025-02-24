@@ -34,7 +34,11 @@ export default function PhotoDetailsCard({
           {photoDetails.likes} likes
         </span>
         <p className="photoDetail__image--time">
-          {new Date(photoDetails.timestamp).toLocaleDateString()}
+        {new Date(photoDetails.timestamp).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        })}
         </p>
       </div>
       <div className="photoDetail__image--photographer">

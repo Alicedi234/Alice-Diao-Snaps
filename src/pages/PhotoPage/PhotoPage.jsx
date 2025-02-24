@@ -1,9 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import PhotoDetailHeader from "../../components/PhotoDetailHeader/PhotoDetailHeader";
 import PhotoDetailsCard from "../../components/PhotoDetailsCard/PhotoDetailsCard";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import PhotoCommentsCard from "../../components/PhotoCommentsCard/PhotoCommentsCard";
+import Footer from "../../components/Footer/Footer";
+import "./PhotoPage.scss";
+
 
 export default function PhotoPage() {
   const [photoDetails, setPhotoDetails] = useState(null);
@@ -43,10 +47,13 @@ export default function PhotoPage() {
   }
   return (
     <>
+    <PhotoDetailHeader/>
+    <main className = "photoPage__main">
     <PhotoDetailsCard photoDetails={photoDetails}/>
     <CommentForm onSubmit={fetchComments}/>
     <PhotoCommentsCard photoComments = {photoComments} />
-    <div>the end</div>
+    </main>
+    <Footer/>
     </>
   );
 }

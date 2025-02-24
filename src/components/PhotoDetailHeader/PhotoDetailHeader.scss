@@ -1,0 +1,29 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.photoDetail__header{
+  margin: 24px 16px 40px 16px;
+  @include flex(row, space-between, center, nowrap);
+  @include tablet{
+    margin: 36px 24px 48px 24px;
+  }
+  &--title{
+    @include mobile-wordmark;
+    @include tablet{
+      @include desktop-wordmark;
+    }
+  }
+  &--link{
+    @include mobile-title;
+    color: $primary-color2;
+    font-weight: 500;
+    font-family: "Outfit";
+    @include tablet{
+      @include desktop-heading;
+    }
+  }
+
+
+}

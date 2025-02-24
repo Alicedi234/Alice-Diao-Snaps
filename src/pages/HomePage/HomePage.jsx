@@ -6,7 +6,6 @@ import Footer from "../../components/Footer/Footer";
 
 import "./HomePage.scss";
 
-
 export default function HomePage() {
   const [isFilterVisible, setIsFilterVisible] = useState(false);
 
@@ -32,12 +31,12 @@ export default function HomePage() {
             </div>
           </div>
         )}
-        <DisplayPhotos isFilterVisible ={isFilterVisible} selectedTag={selectedTag} />
+        <DisplayPhotos
+          isFilterVisible={isFilterVisible}
+          selectedTag={selectedTag}
+        />
       </div>
-      <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
-
