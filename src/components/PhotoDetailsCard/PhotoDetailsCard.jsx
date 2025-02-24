@@ -42,8 +42,8 @@ export default function PhotoDetailsCard({
         </p>
       </div>
       <div className="photoDetail__image--photographer">
-        <span className="photoDetail__image--photographer">Photo by </span>
-        {photoDetails.photographer}
+        <span className="photoDetail__image--photographertext">Photo by </span>
+         {photoDetails.photographer}
       </div>
     </div>
   );
