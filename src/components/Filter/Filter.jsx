@@ -1,5 +1,5 @@
 import tags from "../../data/tags.json";
-import "./FilterButtons.scss";
+import "./Filter.scss";
 
 export default function FilterButtons({ selectedTag, setSelectedTag }) {
   const ClickHandler = (tag) => {
@@ -28,5 +28,3 @@ export default function FilterButtons({ selectedTag, setSelectedTag }) {
   );
 }
 
-// {`filter__button ${selectedTag === tag ? "filter__button--active" : ""}'}
-// <button className ="filter__button" key={index} onClick = {()=>ClickHandler(tag)}>{tag}</button>
