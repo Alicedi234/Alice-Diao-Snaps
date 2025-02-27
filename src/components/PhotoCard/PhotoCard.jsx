@@ -2,7 +2,8 @@ import "./PhotoCard.scss";
 import {Link, useParams} from "react-router-dom";
 
 export default function PhotoCard({filteredPhotos, isFilterVisible}) {
-  
+  const url = import.meta.env.VITE_API_URL;
+
   return (
     <>
       {filteredPhotos.map((photo) => {
@@ -14,7 +15,7 @@ export default function PhotoCard({filteredPhotos, isFilterVisible}) {
             {/* <div className="gallery__image-container"> */}
             <Link to = {`/photos/${photo.id}`}>
               <img
-                src={photo.photo} 
+                src={`${photo.photo.replace("/photos",`${url}/images`)}`}
                 alt="photo"
                 className="gallery__image--item"
                 />
@@ -36,3 +37,10 @@ export default function PhotoCard({filteredPhotos, isFilterVisible}) {
     </>
   );
 }
+
+
+{/* <img
+            className="img"
+            src={`${photo.replace("/photos", `${baseUrl}/images`)}`}
+            alt={photoDescription}
+          /> */}

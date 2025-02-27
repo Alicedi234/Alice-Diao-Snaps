@@ -6,11 +6,11 @@ import "./DisplayPhotos.scss";
 export default function DisplayPhotos({ selectedTag, isFilterVisible }) {
 
   const [photos, setPhotos] = useState([]);
-  const url = "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=4cf989da-7d80-4ad0-8dd3-82429cbbb621"
+  const url = import.meta.env.VITE_API_URL;
   
   useEffect(() =>{
   const fethPhotos = async() => {
-    const response = await axios.get(url);
+    const response = await axios.get(`${url}/photos`);
     console.log(response.data);
     setPhotos(response.data);
   }

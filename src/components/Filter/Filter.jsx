@@ -3,25 +3,18 @@ import axios from "axios";
 import "./Filter.scss";
 
 export default function FilterButtons({ selectedTag, setSelectedTag }) {
-  const [photos, setPhotos] = useState([]);
+  const [tags, setTags] = useState([]);
   const [uniqueTags, setUniqueTags] = useState(new Set());
 
-  const url = "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=4cf989da-7d80-4ad0-8dd3-82429cbbb621";
+  const url  = import.meta.env.VITE_API_URL;
+
 
   useEffect(() => {
-    const fetchPhotos = async () => {
-      const response = await axios.get(url);
-      setPhotos(response.data);
-
-      const tags = new Set();
-      response.data.forEach(photo => {
-        photo.tags.forEach(tag => {
-          tags.add(tag);
-        });
-      });
-      setUniqueTags(tags);
-    };
-    fetchPhotos();
+    const fetchTags = async () => {
+      const response = await axios.get(`${url}/tags`);
+      setTags(response.data);
+    }
+    fetchTags();
   }, []);
 
   const ClickHandler = (tag) => {
@@ -34,7 +27,7 @@ export default function FilterButtons({ selectedTag, setSelectedTag }) {
 
   return (
     <>
-      {Array.from(uniqueTags).map((tag, index) => (
+      {tags.map((tag, index) => (
         <button
           className={`filter__button ${
             selectedTag === tag ? "filter__button--active" : ""
