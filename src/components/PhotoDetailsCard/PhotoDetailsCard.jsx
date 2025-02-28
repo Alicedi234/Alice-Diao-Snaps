@@ -1,12 +1,12 @@
 import "./PhotoDetailsCard.scss";
-export default function PhotoDetailsCard({
-  photoDetails = [],
-  photoComments = [],
-}) {
+
+export default function PhotoDetailsCard({ photoDetails = [],photoComments = [],}) {
+  const url = import.meta.env.VITE_API_URL;
+
   return (
     <div className="photoDetail__image">
       <img
-        src={photoDetails.photo}
+        src={`${photoDetails.photo.replace("/photos",`${url}/images`)}`}
         alt="photo"
         className="photoDetail__image--item"
       />
@@ -48,3 +48,5 @@ export default function PhotoDetailsCard({
     </div>
   );
 }
+
+// `${photo.photo.replace("/photos",`${url}/images`)}`
