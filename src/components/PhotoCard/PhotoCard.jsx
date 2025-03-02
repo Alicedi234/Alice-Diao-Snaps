@@ -37,10 +37,3 @@ export default function PhotoCard({filteredPhotos, isFilterVisible}) {
     </>
   );
 }
-
-
-{/* <img
-            className="img"
-            src={`${photo.replace("/photos", `${baseUrl}/images`)}`}
-            alt={photoDescription}
-          /> */}

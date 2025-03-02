@@ -2,6 +2,7 @@ import { useState } from "react";
 import {useParams} from "react-router-dom";
 import axios from "axios";
 import "./CommentForm.scss";
+import {v4 as uuidv4} from "uuid";
 
 export default function CommentForm({onSubmit}){
   const [name, setName] = useState("");
@@ -25,13 +26,21 @@ export default function CommentForm({onSubmit}){
       return;
     }
 
-    
-    const url = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=4cf989da-7d80-4ad0-8dd3-82429cbbb621`;
-    const response = await axios.post(url, {
+    const baseurl = import.meta.env.VITE_API_URL;
+    const url = `${baseurl}/photos/${id}/comments`;
+
+    const requestbody = {
       name: name,
-      comment:comment,
+      comment: comment,
+      id: uuidv4(),
     }
-    )
+
+    const response = await axios.post(url, requestbody, {
+      headers: {
+        "Content-Type" : "application/json",
+      },
+    });
+
     console.log("comment submitted", response.data);
     setName("")
     setComment("")
