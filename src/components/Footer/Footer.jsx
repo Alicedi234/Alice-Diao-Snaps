@@ -9,8 +9,8 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footer__container">
-        <Link to ="/">
-        <h1 className="footer__title">Snaps</h1>
+        <Link to="/">
+          <h1 className="footer__title">Snaps</h1>
         </Link>
         <div className="footer__container2">
           <ul className="footer__list1">

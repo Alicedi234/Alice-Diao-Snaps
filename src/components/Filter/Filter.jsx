@@ -6,14 +6,13 @@ export default function FilterButtons({ selectedTag, setSelectedTag }) {
   const [tags, setTags] = useState([]);
   const [uniqueTags, setUniqueTags] = useState(new Set());
 
-  const url  = import.meta.env.VITE_API_URL;
-
+  const url = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchTags = async () => {
       const response = await axios.get(`${url}/tags`);
       setTags(response.data);
-    }
+    };
     fetchTags();
   }, []);
 

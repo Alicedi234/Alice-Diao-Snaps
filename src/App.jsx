@@ -1,24 +1,23 @@
 import "./App.scss";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import PhotoPage from "./pages/PhotoPage/PhotoPage"
-
-
+import PhotoPage from "./pages/PhotoPage/PhotoPage";
 
 function App() {
-  return(
+  return (
     <main>
       <Router>
-        <Routes> */
+        <Routes>
+          {" "}
+          */
           {/* "/" -> HomePage */}
-          <Route path = "/" element = {<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           {/* "/photos/:id" -> PhotoPage*/}
-          <Route path="/photos/:id" element = {<PhotoPage/>}/>
+          <Route path="/photos/:id" element={<PhotoPage />} />
         </Routes>
       </Router>
     </main>
-
-  )
+  );
 }
 
 export default App;

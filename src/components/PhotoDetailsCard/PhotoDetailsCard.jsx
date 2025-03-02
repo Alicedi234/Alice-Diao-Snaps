@@ -1,12 +1,15 @@
 import "./PhotoDetailsCard.scss";
 
-export default function PhotoDetailsCard({ photoDetails = [],photoComments = [],}) {
+export default function PhotoDetailsCard({
+  photoDetails = [],
+  photoComments = [],
+}) {
   const url = import.meta.env.VITE_API_URL;
 
   return (
     <div className="photoDetail__image">
       <img
-        src={`${photoDetails.photo.replace("/photos",`${url}/images`)}`}
+        src={`${photoDetails.photo.replace("/photos", `${url}/images`)}`}
         alt="photo"
         className="photoDetail__image--item"
       />
@@ -34,16 +37,16 @@ export default function PhotoDetailsCard({ photoDetails = [],photoComments = [],
           {photoDetails.likes} likes
         </span>
         <p className="photoDetail__image--time">
-        {new Date(photoDetails.timestamp).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })}
+          {new Date(photoDetails.timestamp).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })}
         </p>
       </div>
       <div className="photoDetail__image--photographer">
         <span className="photoDetail__image--photographertext">Photo by </span>
-         {photoDetails.photographer}
+        {photoDetails.photographer}
       </div>
     </div>
   );

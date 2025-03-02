@@ -3,9 +3,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.photoPage__main{
-  @include desktop{
+.photoPage__main {
+  @include desktop {
     max-width: 1300px;
-    margin:auto;
+    margin: auto;
   }
 }

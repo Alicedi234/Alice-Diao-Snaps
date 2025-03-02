@@ -3,67 +3,66 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-.comment{
+.comment {
   width: 100%;
   margin: 48px 16px;
-  @include tablet{
+  @include tablet {
     margin: 100px 24px;
   }
-  &__label{
+  &__label {
     display: block;
     @include mobile-heading;
     margin: 8px 0;
-    @include tablet{
+    @include tablet {
       @include desktop-heading;
-      margin:16px 0;
+      margin: 16px 0;
     }
-    
   }
-  &__input--name{
-    width:95%;
+  &__input--name {
+    width: 95%;
     border-radius: 8px;
     border: 2px solid $secondary-color1;
-    background-color: #FFFFFF;
-    height:5vh;
+    background-color: #ffffff;
+    height: 5vh;
     margin-bottom: 8px;
     text-align: left;
     padding: 8px;
-    &:focus{
+    &:focus {
       border: 2px solid $primary-color2;
     }
-    &:invalid{
-      border: 2px solid #B10606;
+    &:invalid {
+      border: 2px solid #b10606;
     }
-    @include tablet{
-      width:96%;
-      height:6vh;
+    @include tablet {
+      width: 96%;
+      height: 6vh;
       padding: 8px 16px;
     }
   }
-  &__input--comment{
-    width:95%;
+  &__input--comment {
+    width: 95%;
     border-radius: 8px;
     border: 2px solid $secondary-color1;
-    background-color: #FFFFFF;
-    height:8vh;
+    background-color: #ffffff;
+    height: 8vh;
     text-align: left;
     padding: 8px;
-    &:focus{
-      border: 2px solid $primary-color2
+    &:focus {
+      border: 2px solid $primary-color2;
     }
-    &:invalid{
-      border: 2px solid #B10606;
+    &:invalid {
+      border: 2px solid #b10606;
     }
-    @include tablet{
-      width:96%;
-      height:10vh;
+    @include tablet {
+      width: 96%;
+      height: 10vh;
       padding: 8px 16px;
     }
   }
-  &__button{
+  &__button {
     @include mobile-heading;
     background-color: $primary-color2;
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 8px;
     border: none;
     padding: 8px 16px;
@@ -71,8 +70,8 @@
     font-weight: 400;
     margin-left: auto;
     display: block;
-    margin-right:6%;
-    @include tablet{
+    margin-right: 6%;
+    @include tablet {
       @include desktop-heading;
       margin-right: 4%;
       margin-top: 16px;
@@ -81,6 +80,6 @@
   }
 }
 
-.invalid{
-  border: 2px solid #B10606;
+.invalid {
+  border: 2px solid #b10606;
 }
