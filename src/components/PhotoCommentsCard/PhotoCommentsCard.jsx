@@ -1,3 +1,4 @@
+import React from "react";
 import "./PhotoCommentsCard.scss";
 export default function PhotoCommentsCard({ photoComments }) {
   const reversePhotoComments = [...photoComments].reverse();

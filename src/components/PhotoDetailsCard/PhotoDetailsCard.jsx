@@ -1,3 +1,4 @@
+import React from "react";
 import "./PhotoDetailsCard.scss";
 
 export default function PhotoDetailsCard({

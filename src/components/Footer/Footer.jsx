@@ -1,3 +1,4 @@
+import React from "react";
 import "./Footer.scss";
 import { Link } from "react-router-dom";
 import facebookIcon from "../../assets/Icons/Facebook.svg";

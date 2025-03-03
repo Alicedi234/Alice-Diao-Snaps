@@ -1,4 +1,4 @@
-import FilterIcon from "../../assets/Icons/Filter.svg";
+import React from "react";
 import "./FilterControl.scss";
 
 export default function FilterControl({ isFilterVisible, setIsFilterVisible }) {

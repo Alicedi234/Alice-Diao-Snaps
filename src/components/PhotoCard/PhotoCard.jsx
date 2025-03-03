@@ -1,3 +1,4 @@
+import React from "react";
 import "./PhotoCard.scss";
 import { Link, useParams } from "react-router-dom";
 

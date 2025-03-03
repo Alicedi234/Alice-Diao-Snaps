@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -26,28 +27,28 @@ export default function CommentForm({ onSubmit }) {
       return;
     }
 
-    const baseurl = import.meta.env.VITE_API_URL;
-    const url = `${baseurl}/photos/${id}/comments`;
-
-    const requestbody = {
-      name: name,
-      comment: comment,
-      id: uuidv4(),
-    };
-
-    const response = await axios.post(url, requestbody, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    console.log("comment submitted", response.data);
-    setName("");
-    setComment("");
-
-    if (onSubmit) {
-      onSubmit();
-    }
+      const baseurl = import.meta.env.VITE_API_URL;
+      const url = `${baseurl}/photos/${id}/comments`;
+      
+      const requestbody = {
+        name: name,
+        comment: comment,
+        id: uuidv4(),
+      };
+      
+      const response = await axios.post(url, requestbody, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      
+      console.log("comment submitted", response.data);
+      setName("");
+      setComment("");
+      
+      if (onSubmit) {
+        onSubmit();
+      }
   };
 
   return (

@@ -1,3 +1,4 @@
+import React from "react";
 import FilterControl from "../FilterControl/FilterControl";
 import "./Header.scss";
 import { Link } from "react-router-dom";
